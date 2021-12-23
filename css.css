@@ -1,0 +1,125 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #161616;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 7vh;
+    background-color: #1d1d1d;
+    color: white;
+}
+
+nav h1 {
+    cursor: pointer;
+    font-size: 30px;
+}
+
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    background-color: transparent;
+    margin-top:  0.5em;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.dropdown-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+   body {
+       overflow-x: hidden;
+   }
+
+   nav {
+       border: 1px solid black;
+   }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 70vh;
+        top: 6.1vh;
+        background-color: #1d1d1d;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        border: 1px solid black;
+        border-top: none;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    
+    .dropdown-menu {
+        display: block;
+    }
+
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from {
+        opactity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.main-info {
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 4em auto;
+    max-width: 90em; 
+}
+
+img {
+    margin-right: 12em;
+}
