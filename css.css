@@ -2,7 +2,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont;
 }
 
 body {
@@ -16,31 +16,48 @@ nav {
     min-height: 7vh;
     background-color: #1d1d1d;
     color: white;
+    border: 1px solid black;
 }
 
-nav h1 {
+.title {
     cursor: pointer;
     font-size: 30px;
+    background: linear-gradient(to right, #2c62c7, #b3178e);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    margin-left: 4em;
+    text-align: center;
+    width: 65%;
 }
-
 
 .nav-links {
     display: flex;
     justify-content: space-around;
     width: 30%;
     background-color: transparent;
-    margin-top:  0.5em;
 }
 
 .nav-links li {
     list-style: none;
+    transition: 0.4s ease-out;
+}
+
+.nav-links li:hover {
+    color: #b3178e;
+    transform: translateY(-13%);
 }
 
 .nav-links a {
-    color: white;
+    color: rgb(15, 141, 224);
     text-decoration: none;
     font-weight: bold;
+    transition: 0.4s ease-out;
 }
+
+.nav-links a:hover {
+    color: #b3178e;
+}
+
 
 .dropdown-menu {
     display: none;
@@ -74,17 +91,18 @@ nav h1 {
         position: absolute;
         right: 0px;
         height: 70vh;
-        top: 6.1vh;
+        top: 7vh;
         background-color: #1d1d1d;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 40%;
+        width: 25%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
         border: 1px solid black;
         border-top: none;
     }
+    
     .nav-links li {
         opacity: 0;
     }
@@ -93,7 +111,24 @@ nav h1 {
         display: block;
     }
 
+    .left {
+        color: white;
+        position: absolute;
+        top: 10em;
+    }
+    
+    .left h1 {
+        font-size: 35px;
+    }
+
+    .right {
+        min-width: 0px;
+    }
+
 }
+
+/*------this is the end of the media tags------*/
+
 
 .nav-active {
     transform: translateX(0%);
@@ -101,7 +136,7 @@ nav h1 {
 
 @keyframes navLinkFade{
     from {
-        opactity: 0;
+        opacity: 0;
         transform: translateX(50px);
     }
 
@@ -116,10 +151,68 @@ nav h1 {
     justify-content:  space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin: 4em auto;
-    max-width: 90em; 
+    margin: 5em auto;
+    max-width: 80em; 
 }
 
-img {
-    margin-right: 12em;
+.main-image {
+    margin-right: 2em;
+    width: 500px;
+    border-radius: 20px;
+}
+
+section div h1 {
+    font-size: 60px;
+    font-weight: bolder;
+    margin-left: 1.5em;
+}
+
+.Revelutionary {
+    background: linear-gradient(to right, #bd00ad, #730bd4);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.Innovative {
+    background: linear-gradient(to right, #12cfb0, #00ff6a);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.Powerful {
+    background: linear-gradient(to right, #0077ff, #00fff2);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.NGT {
+    position: absolute;
+    font-size: 25px;
+    color: white;
+    bottom: 9.5em;
+    width:790px;
+    margin-left: 12em;
+}
+
+
+.buy {
+    position: absolute;
+    top: 30.2em;
+    margin-left: 10em;
+    width: 120px;
+    height: 50px;
+    border-radius: 5px;
+    background: purple;
+    border: 3px solid purple;
+    color: #121013;
+    transition: 0.35s ease-out; 
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 17.5px;
+    text-shadow: 0em 0em 0.1em #2C0E37;
+    box-shadow: 0em 0em 1em 0.1em purple;
+}
+
+.buy:hover {
+    transform: translateY(-5%);
+    cursor: pointer;
 }
